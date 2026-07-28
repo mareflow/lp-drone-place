@@ -1141,7 +1141,7 @@
         @media (pointer: coarse), (max-width: 768px) {
             .mobile-drone {
                 display: block;
-                animation: normalFly 15s linear infinite;
+                animation: normalFly 20s ease-in-out infinite alternate;
             }
             .mobile-drone.crashed {
                 animation: crashSequence 8s forwards;
@@ -1221,9 +1221,8 @@
         }
 
         @keyframes normalFly {
-            0% { transform: translate(-30vw, 15vh) rotate(5deg) scale(0.8); opacity: 1; }
-            40% { transform: translate(130vw, 5vh) rotate(-5deg) scale(1); opacity: 1; }
-            41%, 100% { transform: translate(130vw, 5vh) rotate(-5deg) scale(1); opacity: 0; }
+            0% { transform: translate(10vw, 15vh) rotate(5deg) scale(0.8); }
+            100% { transform: translate(75vw, 25vh) rotate(-5deg) scale(0.9); }
         }
 
         @keyframes crashSequence {
@@ -1742,8 +1741,21 @@
                 if (entries[0].isIntersecting) {
                     const drone = document.querySelector('.mobile-drone');
                     if (drone && !drone.classList.contains('crashed')) {
-                        // Force a reflow to restart animation smoothly if needed, then add crashed class
+                        const rect = drone.getBoundingClientRect();
+                        drone.style.animation = 'none';
+                        drone.style.left = rect.left + 'px';
+                        drone.style.top = rect.top + 'px';
+                        drone.style.transform = 'none';
+                        drone.offsetHeight; // Force reflow
+                        
                         drone.classList.add('crashed');
+                        
+                        // Center it while it's hidden (after 2.5s)
+                        setTimeout(() => {
+                            drone.style.left = '50%';
+                            drone.style.top = '0px';
+                            drone.style.marginLeft = '-20px';
+                        }, 2500);
                     }
                 }
             }, { threshold: 0.1 });
