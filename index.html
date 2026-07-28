@@ -637,7 +637,7 @@
             color: var(--accent-blue);
             background-color: rgba(0, 180, 255, 0.05);
         }
-        
+
         .btn-blue {
             background-color: var(--accent-blue);
             color: #000;
@@ -666,7 +666,7 @@
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
             aspect-ratio: 4/3;
         }
-        
+
         .dji-image img {
             width: 100%;
             height: 100%;
@@ -698,7 +698,7 @@
             text-decoration: none;
             transition: transform 0.3s ease;
         }
-        
+
         .ig-card:hover {
             transform: translateY(-5px);
             border-color: rgba(255, 255, 255, 0.1);
@@ -723,7 +723,7 @@
             font-size: 24px;
             transition: transform 0.3s ease;
         }
-        
+
         .ig-card:hover .ig-icon-wrapper {
             transform: scale(1.1);
             background-color: rgba(0, 180, 255, 0.25);
@@ -743,21 +743,21 @@
             padding: 100px 0;
             text-align: center;
         }
-        
+
         .reviews-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 24px;
             text-align: left;
         }
-        
+
         .review-card {
             background-color: var(--bg-card);
             border-radius: 20px;
             padding: 32px;
             border: 1px solid rgba(255, 255, 255, 0.05);
         }
-        
+
         .stars {
             color: var(--accent-green);
             font-size: 20px;
@@ -847,7 +847,7 @@
             margin-bottom: 40px;
             line-height: 1.6;
         }
-        
+
         .cta-btn {
             background-color: var(--accent-green);
             color: #000;
@@ -899,7 +899,7 @@
             color: var(--text-secondary);
             font-size: 14px;
         }
-        
+
         .footer-address i {
             color: var(--accent-blue);
             font-size: 18px;
@@ -919,13 +919,17 @@
                 flex-direction: column;
                 text-align: center;
             }
+
             .badges-grid {
                 justify-content: center;
             }
-            .ig-grid, .reviews-grid {
+
+            .ig-grid,
+            .reviews-grid {
                 grid-template-columns: repeat(2, 1fr);
             }
 
+            .hero-content,
             .hero-content {
                 flex-direction: column-reverse;
                 text-align: center;
@@ -942,6 +946,7 @@
 
             .hero-media {
                 width: 100%;
+                margin-top: 40px;
                 margin-bottom: 40px;
                 margin-top: 0;
             }
@@ -983,6 +988,7 @@
                 gap: 24px;
                 text-align: center;
             }
+
             .cta-content h2 {
                 font-size: 32px;
             }
@@ -1016,7 +1022,16 @@
 
         /* Realistic Drone Cursor */
         @media (pointer: fine) {
-            body, a, button, .faq-item, .model-badge, .review-card, .step-card, .whatsapp-float, iframe {
+
+            body,
+            a,
+            button,
+            .faq-item,
+            .model-badge,
+            .review-card,
+            .step-card,
+            .whatsapp-float,
+            iframe {
                 cursor: none !important;
             }
         }
@@ -1042,7 +1057,7 @@
             height: 20px;
             background: linear-gradient(135deg, #555, #111);
             border-radius: 4px 4px 6px 6px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.5), inset 0 1px 1px rgba(255,255,255,0.3);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5), inset 0 1px 1px rgba(255, 255, 255, 0.3);
             z-index: 5;
         }
 
@@ -1056,13 +1071,24 @@
             left: 50%;
             margin-top: -12px;
             margin-left: -1px;
-            box-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+            box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
         }
-        
-        .arm-tl { transform: translate(-8px, -8px) rotate(-45deg); }
-        .arm-tr { transform: translate(8px, -8px) rotate(45deg); }
-        .arm-bl { transform: translate(-8px, 8px) rotate(-135deg); }
-        .arm-br { transform: translate(8px, 8px) rotate(135deg); }
+
+        .arm-tl {
+            transform: translate(-8px, -8px) rotate(-45deg);
+        }
+
+        .arm-tr {
+            transform: translate(8px, -8px) rotate(45deg);
+        }
+
+        .arm-bl {
+            transform: translate(-8px, 8px) rotate(-135deg);
+        }
+
+        .arm-br {
+            transform: translate(8px, 8px) rotate(135deg);
+        }
 
         .drone-motor {
             position: absolute;
@@ -1084,15 +1110,24 @@
             margin-top: -14px;
             margin-left: -14px;
             border-radius: 50%;
-            background: conic-gradient(rgba(255,255,255,0) 0%, rgba(255,255,255,0.4) 10%, rgba(255,255,255,0) 20%, rgba(255,255,255,0.4) 50%, rgba(255,255,255,0) 60%, rgba(255,255,255,0.4) 90%, rgba(255,255,255,0) 100%);
+            background: conic-gradient(rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.4) 10%, rgba(255, 255, 255, 0) 20%, rgba(255, 255, 255, 0.4) 50%, rgba(255, 255, 255, 0) 60%, rgba(255, 255, 255, 0.4) 90%, rgba(255, 255, 255, 0) 100%);
             animation: spinProp 0.05s linear infinite;
         }
 
-        .arm-tl .drone-propeller, .arm-br .drone-propeller { animation-direction: normal; }
-        .arm-tr .drone-propeller, .arm-bl .drone-propeller { animation-direction: reverse; }
+        .arm-tl .drone-propeller,
+        .arm-br .drone-propeller {
+            animation-direction: normal;
+        }
+
+        .arm-tr .drone-propeller,
+        .arm-bl .drone-propeller {
+            animation-direction: reverse;
+        }
 
         @keyframes spinProp {
-            to { transform: rotate(360deg); }
+            to {
+                transform: rotate(360deg);
+            }
         }
 
         .drone-light {
@@ -1101,26 +1136,71 @@
             height: 3px;
             border-radius: 50%;
         }
-        .light-fl { top: 2px; left: 1px; background: #ff0000; box-shadow: 0 0 6px #ff0000; animation: blinkFast 0.5s infinite; }
-        .light-fr { top: 2px; right: 1px; background: #ff0000; box-shadow: 0 0 6px #ff0000; animation: blinkFast 0.5s infinite; }
-        .light-bl { bottom: 2px; left: 1px; background: #00ff00; box-shadow: 0 0 6px #00ff00; animation: blinkSlow 1.5s infinite; }
-        .light-br { bottom: 2px; right: 1px; background: #00ff00; box-shadow: 0 0 6px #00ff00; animation: blinkSlow 1.5s infinite; }
+
+        .light-fl {
+            top: 2px;
+            left: 1px;
+            background: #ff0000;
+            box-shadow: 0 0 6px #ff0000;
+            animation: blinkFast 0.5s infinite;
+        }
+
+        .light-fr {
+            top: 2px;
+            right: 1px;
+            background: #ff0000;
+            box-shadow: 0 0 6px #ff0000;
+            animation: blinkFast 0.5s infinite;
+        }
+
+        .light-bl {
+            bottom: 2px;
+            left: 1px;
+            background: #00ff00;
+            box-shadow: 0 0 6px #00ff00;
+            animation: blinkSlow 1.5s infinite;
+        }
+
+        .light-br {
+            bottom: 2px;
+            right: 1px;
+            background: #00ff00;
+            box-shadow: 0 0 6px #00ff00;
+            animation: blinkSlow 1.5s infinite;
+        }
 
         @keyframes blinkFast {
-            0%, 49% { opacity: 1; }
-            50%, 100% { opacity: 0.1; }
+
+            0%,
+            49% {
+                opacity: 1;
+            }
+
+            50%,
+            100% {
+                opacity: 0.1;
+            }
         }
-        
+
         @keyframes blinkSlow {
-            0%, 50% { opacity: 1; }
-            51%, 100% { opacity: 0.2; }
+
+            0%,
+            50% {
+                opacity: 1;
+            }
+
+            51%,
+            100% {
+                opacity: 0.2;
+            }
         }
-        
+
         /* Hover state for cursor */
         body.hovering .drone-chassis {
-            box-shadow: 0 4px 15px #00b4ff, inset 0 1px 2px rgba(255,255,255,0.8);
+            box-shadow: 0 4px 15px #00b4ff, inset 0 1px 2px rgba(255, 255, 255, 0.8);
             background: linear-gradient(135deg, #00b4ff, #005a80);
         }
+
         body.hovering .drone-motor {
             border-color: #00b4ff;
         }
@@ -1129,6 +1209,8 @@
         .mobile-drone {
             display: none;
             position: fixed;
+            top: 15%;
+            left: -100px;
             top: 0;
             left: 0;
             margin-left: -20px;
@@ -1138,113 +1220,201 @@
             pointer-events: none;
         }
 
-        @media (pointer: coarse), (max-width: 768px) {
+        @media (pointer: coarse),
+        (max-width: 768px) {
             .mobile-drone {
                 display: block;
-                animation: normalFly 20s ease-in-out infinite alternate;
+                animation: mobileFly 15s linear infinite;
+                animation: normalFly 15s linear infinite;
             }
+
             .mobile-drone.crashed {
                 animation: crashSequence 8s forwards;
             }
         }
 
-        .drone-banner {
-            position: absolute;
-            top: 60px;
-            left: 50%;
-            transform: translateX(-50%);
-            background: rgba(15, 22, 35, 0.95);
-            border: 1px solid var(--accent-blue);
-            padding: 12px;
-            border-radius: 8px;
-            width: 220px;
-            text-align: center;
-            pointer-events: auto;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.5);
-            opacity: 0;
-            transition: opacity 1s ease;
-        }
+        @keyframes mobileFly {
+            0% {
+                transform: translate(0, 0) rotate(15deg) scale(0.8);
+            }
 
-        .mobile-drone.crashed .drone-banner {
-            animation: showBannerOnce 8s forwards;
-        }
-        
-        .drone-banner::before, .drone-banner::after {
-            content: '';
-            position: absolute;
-            top: -20px;
-            width: 1px;
-            height: 20px;
-            background: rgba(255,255,255,0.5);
-        }
-        .drone-banner::before { left: 20%; }
-        .drone-banner::after { right: 20%; }
-        
-        .close-banner {
-            position: absolute;
-            top: -10px;
-            right: -10px;
-            background: #ef4444;
-            color: #fff;
-            border-radius: 50%;
-            width: 24px;
-            height: 24px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 14px;
-            cursor: pointer;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.5);
-            z-index: 10;
-        }
+            20% {
+                transform: translate(40vw, 15vh) rotate(-5deg) scale(1);
+            }
 
-        .drone-banner p {
-            font-size: 13px;
-            color: #fff;
-            margin-bottom: 10px;
-            font-weight: 600;
-            line-height: 1.3;
-        }
-        
-        .banner-btn {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: 6px;
-            background: var(--accent-green);
-            color: #000;
-            padding: 8px 16px;
-            border-radius: 20px;
-            text-decoration: none;
-            font-size: 13px;
-            font-weight: 700;
-        }
+            50% {
+                transform: translate(80vw, -10vh) rotate(10deg) scale(0.9);
+            }
 
-        @keyframes normalFly {
-            0% { transform: translate(10vw, 15vh) rotate(5deg) scale(0.8); }
-            100% { transform: translate(75vw, 25vh) rotate(-5deg) scale(0.9); }
-        }
+            80% {
+                transform: translate(120vw, 5vh) rotate(-15deg) scale(0.8);
+            }
 
-        @keyframes crashSequence {
-            /* 0% to 20% (0 to 1.6s): Crash from current inline left/top */
-            0% { transform: translate(0, 0) rotate(0deg); opacity: 1; }
-            5% { transform: translate(5vw, -5vh) rotate(-40deg); opacity: 1; }
-            15% { transform: translate(10vw, 30vh) rotate(320deg); opacity: 1; }
-            20% { transform: translate(15vw, 120vh) rotate(600deg); opacity: 0; }
-            
-            /* 21% to 35% (1.68s to 2.8s): Hidden. JS centers it at 2000ms */
-            21%, 35% { transform: translate(0, 120vh) rotate(0deg) scale(1.2); opacity: 0; }
-            
-            /* 40% to 100% (3.2s to 8s): Rises and hovers */
-            40% { transform: translate(0, 80vh) rotate(0deg) scale(1.2); opacity: 1; }
-            60% { transform: translate(0, 40vh) rotate(-2deg) scale(1.2); opacity: 1; }
-            100% { transform: translate(0, 40vh) rotate(0deg) scale(1.2); opacity: 1; }
-        }
+            100% {
+                transform: translate(120vw, 5vh) rotate(-15deg) scale(0.8);
+            }
 
-        @keyframes showBannerOnce {
-            0%, 55% { opacity: 0; }
-            70%, 100% { opacity: 1; }
-        }
+            .drone-banner {
+                position: absolute;
+                top: 60px;
+                left: 50%;
+                transform: translateX(-50%);
+                background: rgba(15, 22, 35, 0.95);
+                border: 1px solid var(--accent-blue);
+                padding: 12px;
+                border-radius: 8px;
+                width: 220px;
+                text-align: center;
+                pointer-events: auto;
+                box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+                opacity: 0;
+                transition: opacity 1s ease;
+            }
+
+            .mobile-drone.crashed .drone-banner {
+                animation: showBannerOnce 8s forwards;
+            }
+
+            .drone-banner::before,
+            .drone-banner::after {
+                content: '';
+                position: absolute;
+                top: -20px;
+                width: 1px;
+                height: 20px;
+                background: rgba(255, 255, 255, 0.5);
+            }
+
+            .drone-banner::before {
+                left: 20%;
+            }
+
+            .drone-banner::after {
+                right: 20%;
+            }
+
+            .close-banner {
+                position: absolute;
+                top: -10px;
+                right: -10px;
+                background: #ef4444;
+                color: #fff;
+                border-radius: 50%;
+                width: 24px;
+                height: 24px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 14px;
+                cursor: pointer;
+                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+                z-index: 10;
+            }
+
+            .drone-banner p {
+                font-size: 13px;
+                color: #fff;
+                margin-bottom: 10px;
+                font-weight: 600;
+                line-height: 1.3;
+            }
+
+            .banner-btn {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                gap: 6px;
+                background: var(--accent-green);
+                color: #000;
+                padding: 8px 16px;
+                border-radius: 20px;
+                text-decoration: none;
+                font-size: 13px;
+                font-weight: 700;
+            }
+
+            @keyframes normalFly {
+                0% {
+                    transform: translate(-30vw, 15vh) rotate(5deg) scale(0.8);
+                    opacity: 1;
+                }
+
+                40% {
+                    transform: translate(130vw, 5vh) rotate(-5deg) scale(1);
+                    opacity: 1;
+                }
+
+                41%,
+                100% {
+                    transform: translate(130vw, 5vh) rotate(-5deg) scale(1);
+                    opacity: 0;
+                }
+            }
+
+            @keyframes crashSequence {
+
+                /* 0% to 25%: Flies in */
+                0% {
+                    transform: translate(-20vw, 20vh) rotate(15deg) scale(0.8);
+                    opacity: 1;
+                }
+
+                25% {
+                    transform: translate(40vw, 15vh) rotate(5deg) scale(1);
+                    opacity: 1;
+                }
+
+                /* 26% to 35%: Crash */
+                26% {
+                    transform: translate(45vw, 5vh) rotate(-40deg) scale(0.9);
+                    opacity: 1;
+                }
+
+                28% {
+                    transform: translate(50vw, 15vh) rotate(220deg) scale(0.9);
+                    opacity: 1;
+                }
+
+                35% {
+                    transform: translate(55vw, 120vh) rotate(600deg) scale(0.9);
+                    opacity: 0;
+                }
+
+                /* 36% to 55%: Hidden */
+                36%,
+                55% {
+                    transform: translate(50vw, 120vh) rotate(0deg) scale(1.2);
+                    opacity: 0;
+                }
+
+                /* 60% to 100%: Rises and hovers */
+                60% {
+                    transform: translate(50vw, 80vh) rotate(0deg) scale(1.2);
+                    opacity: 1;
+                }
+
+                80% {
+                    transform: translate(50vw, 40vh) rotate(-2deg) scale(1.2);
+                    opacity: 1;
+                }
+
+                100% {
+                    transform: translate(50vw, 40vh) rotate(0deg) scale(1.2);
+                    opacity: 1;
+                }
+            }
+
+            @keyframes showBannerOnce {
+
+                0%,
+                65% {
+                    opacity: 0;
+                }
+
+                100% {
+                    opacity: 1;
+                }
+            }
     </style>
 </head>
 
@@ -1268,7 +1438,10 @@
                 <a href="#duvidas">Dúvidas</a>
             </nav>
 
-            <a href="https://wa.me/554833759020?text=ol%C3%A1%20estava%20em%20sua%20p%C3%A1gina%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es" target="_blank" class="btn-primary" style="text-decoration: none; display: inline-flex; align-items: center; justify-content: center;">Orçamento grátis</a>
+            <a href="https://wa.me/554833759020?text=ol%C3%A1%20estava%20em%20sua%20p%C3%A1gina%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es"
+                target="_blank" class="btn-primary"
+                style="text-decoration: none; display: inline-flex; align-items: center; justify-content: center;">Orçamento
+                grátis</a>
         </div>
     </header>
 
@@ -1286,7 +1459,9 @@
                     Zenmuse. Orçamento em 48h, sem custo.</p>
 
                 <div class="hero-buttons">
-                    <a href="https://wa.me/554833759020?text=ol%C3%A1%20estava%20em%20sua%20p%C3%A1gina%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es" target="_blank" class="btn-green" style="text-decoration: none; display: inline-flex; align-items: center; justify-content: center;">
+                    <a href="https://wa.me/554833759020?text=ol%C3%A1%20estava%20em%20sua%20p%C3%A1gina%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es"
+                        target="_blank" class="btn-green"
+                        style="text-decoration: none; display: inline-flex; align-items: center; justify-content: center;">
                         <i class="ph ph-whatsapp-logo"></i> Falar com um técnico
                     </a>
                     <button class="btn-outline">
@@ -1309,7 +1484,12 @@
 
             <div class="hero-media">
                 <div class="video-placeholder">
-                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/-X2SbEEFLag?autoplay=1&mute=1&loop=1&playlist=-X2SbEEFLag" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 10;"></iframe>
+                    <iframe width="100%" height="100%"
+                        src="https://www.youtube.com/embed/-X2SbEEFLag?autoplay=1&mute=1&loop=1&playlist=-X2SbEEFLag"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen
+                        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 10;"></iframe>
                 </div>
             </div>
         </div>
@@ -1452,7 +1632,8 @@
                 </div>
                 <div class="step-content">
                     <h3>Envie seu equipamento</h3>
-                    <p>Com o código em mãos, imprima a ficha, embale bem e leve até os Correios. Na Grande Florianópolis você pode trazer pessoalmente à loja.</p>
+                    <p>Com o código em mãos, imprima a ficha, embale bem e leve até os Correios. Na Grande Florianópolis
+                        você pode trazer pessoalmente à loja.</p>
                 </div>
             </div>
 
@@ -1474,7 +1655,8 @@
                 </div>
                 <div class="step-content">
                     <h3>Manutenção e retorno</h3>
-                    <p>Aprovado o orçamento, realizamos o serviço e o pagamento é feito somente após a finalização. O retorno é sem custo de frete.</p>
+                    <p>Aprovado o orçamento, realizamos o serviço e o pagamento é feito somente após a finalização. O
+                        retorno é sem custo de frete.</p>
                 </div>
             </div>
         </div>
@@ -1485,8 +1667,9 @@
         <div class="dji-content">
             <div class="dji-text">
                 <h2>Atendemos toda a linha DJI</h2>
-                <p>Do drone de hobby ao equipamento profissional de mapeamento e agricultura. Se é DJI, a gente resolve.</p>
-                
+                <p>Do drone de hobby ao equipamento profissional de mapeamento e agricultura. Se é DJI, a gente resolve.
+                </p>
+
                 <div class="badges-grid">
                     <div class="model-badge">Mavic</div>
                     <div class="model-badge">Air</div>
@@ -1499,14 +1682,17 @@
                     <div class="model-badge">Linha RTK</div>
                     <div class="model-badge">Agras</div>
                 </div>
-                
-                <a href="https://wa.me/554833759020?text=ol%C3%A1%20estava%20em%20sua%20p%C3%A1gina%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es" target="_blank" class="btn-blue" style="text-decoration: none; display: inline-flex; align-items: center; justify-content: center;">
+
+                <a href="https://wa.me/554833759020?text=ol%C3%A1%20estava%20em%20sua%20p%C3%A1gina%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es"
+                    target="_blank" class="btn-blue"
+                    style="text-decoration: none; display: inline-flex; align-items: center; justify-content: center;">
                     Consultar meu modelo <i class="ph ph-arrow-right"></i>
                 </a>
             </div>
-            
+
             <div class="dji-image">
-                <img src="https://images.unsplash.com/photo-1524143986875-3b098d78b363?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Drones DJI em prateleira iluminada">
+                <img src="https://images.unsplash.com/photo-1524143986875-3b098d78b363?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                    alt="Drones DJI em prateleira iluminada">
             </div>
         </div>
     </section>
@@ -1518,21 +1704,24 @@
                 <h2>Manutenção em vídeo</h2>
                 <p>Acompanhe no nosso Instagram os bastidores dos reparos feitos na bancada.</p>
             </div>
-            
+
             <div class="ig-grid">
                 <!-- Video 1 -->
                 <div class="ig-card">
-                    <iframe src="https://www.instagram.com/reel/DKNOZBBByga/embed" width="100%" height="100%" frameborder="0" scrolling="no" allowtransparency="true" style="border: none; flex: 1;"></iframe>
+                    <iframe src="https://www.instagram.com/reel/DKNOZBBByga/embed" width="100%" height="100%"
+                        frameborder="0" scrolling="no" allowtransparency="true" style="border: none; flex: 1;"></iframe>
                 </div>
-                
+
                 <!-- Video 2 -->
                 <div class="ig-card">
-                    <iframe src="https://www.instagram.com/reel/DJ4T65HpXg3/embed" width="100%" height="100%" frameborder="0" scrolling="no" allowtransparency="true" style="border: none; flex: 1;"></iframe>
+                    <iframe src="https://www.instagram.com/reel/DJ4T65HpXg3/embed" width="100%" height="100%"
+                        frameborder="0" scrolling="no" allowtransparency="true" style="border: none; flex: 1;"></iframe>
                 </div>
-                
+
                 <!-- Video 3 -->
                 <div class="ig-card">
-                    <iframe src="https://www.instagram.com/reel/DJTvhY9CUKY/embed" width="100%" height="100%" frameborder="0" scrolling="no" allowtransparency="true" style="border: none; flex: 1;"></iframe>
+                    <iframe src="https://www.instagram.com/reel/DJTvhY9CUKY/embed" width="100%" height="100%"
+                        frameborder="0" scrolling="no" allowtransparency="true" style="border: none; flex: 1;"></iframe>
                 </div>
             </div>
         </div>
@@ -1543,29 +1732,38 @@
         <div class="section-header" style="margin: 0 auto 60px;">
             <h2>Quem já voltou a voar</h2>
         </div>
-        
+
         <div class="reviews-grid">
             <div class="review-card">
                 <div class="stars">
-                    <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
+                    <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i
+                        class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
                 </div>
-                <p style="color: var(--text-secondary); font-size: 15px; margin-bottom: 16px;">"Atendimento excelente! Meu Mavic voltou novo, e o processo foi muito rápido e transparente. Recomendo de olhos fechados."</p>
+                <p style="color: var(--text-secondary); font-size: 15px; margin-bottom: 16px;">"Atendimento excelente!
+                    Meu Mavic voltou novo, e o processo foi muito rápido e transparente. Recomendo de olhos fechados."
+                </p>
                 <div style="font-weight: 600;">Carlos Mendes</div>
             </div>
-            
+
             <div class="review-card">
                 <div class="stars">
-                    <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
+                    <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i
+                        class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
                 </div>
-                <p style="color: var(--text-secondary); font-size: 15px; margin-bottom: 16px;">"Tive um problema no gimbal do meu Mini 3 e a equipe da Drone Place resolveu em menos de 3 dias. Orçamento justo e profissionais de confiança."</p>
+                <p style="color: var(--text-secondary); font-size: 15px; margin-bottom: 16px;">"Tive um problema no
+                    gimbal do meu Mini 3 e a equipe da Drone Place resolveu em menos de 3 dias. Orçamento justo e
+                    profissionais de confiança."</p>
                 <div style="font-weight: 600;">Mariana Silva</div>
             </div>
-            
+
             <div class="review-card">
                 <div class="stars">
-                    <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
+                    <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i
+                        class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
                 </div>
-                <p style="color: var(--text-secondary); font-size: 15px; margin-bottom: 16px;">"Uso o Matrice para agricultura e não posso ficar com o equipamento parado. O reparo foi ágil e com peças 100% originais. Perfeito!"</p>
+                <p style="color: var(--text-secondary); font-size: 15px; margin-bottom: 16px;">"Uso o Matrice para
+                    agricultura e não posso ficar com o equipamento parado. O reparo foi ágil e com peças 100%
+                    originais. Perfeito!"</p>
                 <div style="font-weight: 600;">Roberto Alves</div>
             </div>
         </div>
@@ -1577,7 +1775,7 @@
             <div class="faq-header">
                 <h2>Dúvidas frequentes</h2>
             </div>
-            
+
             <div class="faq-list">
                 <div class="faq-item">
                     <h3>Quanto tempo leva o reparo?</h3>
@@ -1604,11 +1802,13 @@
         <div class="container cta-content">
             <h2>Seu drone parado é dinheiro parado</h2>
             <p>Fale agora com nosso atendimento e receba o orçamento em até 48h úteis, sem custo e sem compromisso.</p>
-            
-            <a href="https://wa.me/554833759020?text=ol%C3%A1%20estava%20em%20sua%20p%C3%A1gina%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es" target="_blank" class="cta-btn" style="text-decoration: none; display: inline-flex; align-items: center; justify-content: center;">
+
+            <a href="https://wa.me/554833759020?text=ol%C3%A1%20estava%20em%20sua%20p%C3%A1gina%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es"
+                target="_blank" class="cta-btn"
+                style="text-decoration: none; display: inline-flex; align-items: center; justify-content: center;">
                 <i class="ph ph-whatsapp-logo"></i> Converse via WhatsApp
             </a>
-            
+
             <div class="cta-phone">
                 <i class="ph ph-phone-call"></i> (48) 3375-9020
             </div>
@@ -1620,12 +1820,12 @@
         <div class="container">
             <div class="footer-top">
                 <a href="#" class="logo">Drone<span>Place</span></a>
-                
+
                 <div class="footer-address">
                     <i class="ph ph-map-pin"></i> Rua Santo Antônio, 1460, Sala 501 - São José/SC
                 </div>
             </div>
-            
+
             <div class="footer-bottom">
                 © Drone P Comércio e Manutenção de Drones Ltda - CNPJ 42.986.974/0001-36 - Todos os direitos reservados.
             </div>
@@ -1633,7 +1833,8 @@
     </footer>
 
     <!-- Floating WhatsApp -->
-    <a href="https://wa.me/554833759020?text=ol%C3%A1%20estava%20em%20sua%20p%C3%A1gina%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es" target="_blank" class="whatsapp-float">
+    <a href="https://wa.me/554833759020?text=ol%C3%A1%20estava%20em%20sua%20p%C3%A1gina%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es"
+        target="_blank" class="whatsapp-float">
         <i class="ph ph-whatsapp-logo"></i>
     </a>
 
@@ -1646,16 +1847,24 @@
             <div class="drone-light light-br"></div>
         </div>
         <div class="drone-arm arm-tl">
-            <div class="drone-motor"><div class="drone-propeller"></div></div>
+            <div class="drone-motor">
+                <div class="drone-propeller"></div>
+            </div>
         </div>
         <div class="drone-arm arm-tr">
-            <div class="drone-motor"><div class="drone-propeller"></div></div>
+            <div class="drone-motor">
+                <div class="drone-propeller"></div>
+            </div>
         </div>
         <div class="drone-arm arm-bl">
-            <div class="drone-motor"><div class="drone-propeller"></div></div>
+            <div class="drone-motor">
+                <div class="drone-propeller"></div>
+            </div>
         </div>
         <div class="drone-arm arm-br">
-            <div class="drone-motor"><div class="drone-propeller"></div></div>
+            <div class="drone-motor">
+                <div class="drone-propeller"></div>
+            </div>
         </div>
     </div>
 
@@ -1668,22 +1877,31 @@
             <div class="drone-light light-br"></div>
         </div>
         <div class="drone-arm arm-tl">
-            <div class="drone-motor"><div class="drone-propeller"></div></div>
+            <div class="drone-motor">
+                <div class="drone-propeller"></div>
+            </div>
         </div>
         <div class="drone-arm arm-tr">
-            <div class="drone-motor"><div class="drone-propeller"></div></div>
+            <div class="drone-motor">
+                <div class="drone-propeller"></div>
+            </div>
         </div>
         <div class="drone-arm arm-bl">
-            <div class="drone-motor"><div class="drone-propeller"></div></div>
+            <div class="drone-motor">
+                <div class="drone-propeller"></div>
+            </div>
         </div>
         <div class="drone-arm arm-br">
-            <div class="drone-motor"><div class="drone-propeller"></div></div>
+            <div class="drone-motor">
+                <div class="drone-propeller"></div>
+            </div>
         </div>
-        
+
         <div class="drone-banner">
             <i class="ph ph-x close-banner" onclick="this.closest('.mobile-drone').remove()"></i>
             <p>Problemas com seu Drone?</p>
-            <a href="https://wa.me/554833759020?text=ol%C3%A1%20estava%20em%20sua%20p%C3%A1gina%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es" target="_blank" class="banner-btn">
+            <a href="https://wa.me/554833759020?text=ol%C3%A1%20estava%20em%20sua%20p%C3%A1gina%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es"
+                target="_blank" class="banner-btn">
                 <i class="ph ph-whatsapp-logo"></i> Fale com nossos especialistas
             </a>
         </div>
@@ -1694,35 +1912,35 @@
         if (matchMedia('(pointer:fine)').matches) {
             const drone = document.getElementById('drone-cursor');
             drone.style.display = 'block';
-            
+
             let cursorX = window.innerWidth / 2;
             let cursorY = window.innerHeight / 2;
             let droneX = cursorX;
             let droneY = cursorY;
-            
+
             document.addEventListener('mousemove', (e) => {
                 cursorX = e.clientX;
                 cursorY = e.clientY;
             });
-            
+
             function animateDrone() {
                 // Spring physics for smooth following (inertia)
                 droneX += (cursorX - droneX) * 0.35;
                 droneY += (cursorY - droneY) * 0.35;
-                
+
                 // Tilt based on velocity
                 let velX = cursorX - droneX;
                 let velY = cursorY - droneY;
                 let tiltX = Math.max(-30, Math.min(30, velX * 0.8));
                 let tiltY = Math.max(-30, Math.min(30, velY * 0.8));
-                
+
                 // Rotate and scale the drone based on movement direction
                 drone.style.transform = `translate3d(calc(${droneX}px - 50%), calc(${droneY}px - 50%), 0) rotate(${tiltX * 0.5}deg) scale(1.2)`;
-                
+
                 requestAnimationFrame(animateDrone);
             }
             animateDrone();
-            
+
             // Add hover glow effect
             const clickables = document.querySelectorAll('a, button, .faq-item, .model-badge, .review-card, .step-card, iframe, .whatsapp-float');
             clickables.forEach(el => {
@@ -1738,25 +1956,12 @@
                 if (entries[0].isIntersecting) {
                     const drone = document.querySelector('.mobile-drone');
                     if (drone && !drone.classList.contains('crashed')) {
-                        const rect = drone.getBoundingClientRect();
-                        drone.style.animation = 'none';
-                        drone.style.left = rect.left + 'px';
-                        drone.style.top = rect.top + 'px';
-                        drone.style.transform = 'none';
-                        drone.offsetHeight; // Force reflow
-                        
+                        // Force a reflow to restart animation smoothly if needed, then add crashed class
                         drone.classList.add('crashed');
-                        
-                        // Center it while it's hidden (after 2s)
-                        setTimeout(() => {
-                            drone.style.left = '50%';
-                            drone.style.top = '0px';
-                            drone.style.marginLeft = '-20px';
-                        }, 2000);
                     }
                 }
             }, { threshold: 0.1 });
-            
+
             if (statsSection) {
                 observer.observe(statsSection);
             }
