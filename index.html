@@ -1226,27 +1226,24 @@
         }
 
         @keyframes crashSequence {
-            /* 0% to 25%: Flies in */
-            0% { transform: translate(-20vw, 20vh) rotate(15deg) scale(0.8); opacity: 1; }
-            25% { transform: translate(40vw, 15vh) rotate(5deg) scale(1); opacity: 1; }
+            /* 0% to 20% (0 to 1.6s): Crash from current inline left/top */
+            0% { transform: translate(0, 0) rotate(0deg); opacity: 1; }
+            5% { transform: translate(5vw, -5vh) rotate(-40deg); opacity: 1; }
+            15% { transform: translate(10vw, 30vh) rotate(320deg); opacity: 1; }
+            20% { transform: translate(15vw, 120vh) rotate(600deg); opacity: 0; }
             
-            /* 26% to 35%: Crash */
-            26% { transform: translate(45vw, 5vh) rotate(-40deg) scale(0.9); opacity: 1; }
-            28% { transform: translate(50vw, 15vh) rotate(220deg) scale(0.9); opacity: 1; }
-            35% { transform: translate(55vw, 120vh) rotate(600deg) scale(0.9); opacity: 0; }
+            /* 21% to 35% (1.68s to 2.8s): Hidden. JS centers it at 2000ms */
+            21%, 35% { transform: translate(0, 120vh) rotate(0deg) scale(1.2); opacity: 0; }
             
-            /* 36% to 55%: Hidden */
-            36%, 55% { transform: translate(50vw, 120vh) rotate(0deg) scale(1.2); opacity: 0; }
-            
-            /* 60% to 100%: Rises and hovers */
-            60% { transform: translate(50vw, 80vh) rotate(0deg) scale(1.2); opacity: 1; }
-            80% { transform: translate(50vw, 40vh) rotate(-2deg) scale(1.2); opacity: 1; }
-            100% { transform: translate(50vw, 40vh) rotate(0deg) scale(1.2); opacity: 1; }
+            /* 40% to 100% (3.2s to 8s): Rises and hovers */
+            40% { transform: translate(0, 80vh) rotate(0deg) scale(1.2); opacity: 1; }
+            60% { transform: translate(0, 40vh) rotate(-2deg) scale(1.2); opacity: 1; }
+            100% { transform: translate(0, 40vh) rotate(0deg) scale(1.2); opacity: 1; }
         }
 
         @keyframes showBannerOnce {
-            0%, 65% { opacity: 0; }
-            100% { opacity: 1; }
+            0%, 55% { opacity: 0; }
+            70%, 100% { opacity: 1; }
         }
     </style>
 </head>
@@ -1750,12 +1747,12 @@
                         
                         drone.classList.add('crashed');
                         
-                        // Center it while it's hidden (after 2.5s)
+                        // Center it while it's hidden (after 2s)
                         setTimeout(() => {
                             drone.style.left = '50%';
                             drone.style.top = '0px';
                             drone.style.marginLeft = '-20px';
-                        }, 2500);
+                        }, 2000);
                     }
                 }
             }, { threshold: 0.1 });
