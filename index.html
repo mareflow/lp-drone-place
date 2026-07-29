@@ -1259,7 +1259,7 @@
     <!-- Header -->
     <header>
         <div class="container header-content">
-            <a href="#" class="logo">Drone<span>Place</span></a>
+            <a href="#" class="logo" style="display: flex; align-items: center;"><img src="assets/logo.png" alt="Drone Place Logo" style="height: 45px;"></a>
 
             <nav class="nav-links">
                 <a href="#vantagens">Vantagens</a>
@@ -1519,20 +1519,89 @@
                 <p>Acompanhe no nosso Instagram os bastidores dos reparos feitos na bancada.</p>
             </div>
             
-            <div class="ig-grid">
-                <!-- Video 1 -->
-                <div class="ig-card">
-                    <iframe src="https://www.instagram.com/reel/DKNOZBBByga/embed" width="100%" height="100%" frameborder="0" scrolling="no" allowtransparency="true" style="border: none; flex: 1;"></iframe>
+            <style>
+                .ig-layout-new {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 60px;
+                }
+                .ig-row {
+                    display: flex;
+                    align-items: center;
+                    gap: 50px;
+                }
+                .ig-row.reverse {
+                    flex-direction: row-reverse;
+                }
+                .ig-text-box {
+                    flex: 1;
+                }
+                .ig-text-box h3 {
+                    font-size: 32px;
+                    color: var(--white);
+                    margin-bottom: 20px;
+                }
+                .ig-text-box p {
+                    color: var(--gray);
+                    font-size: 18px;
+                    line-height: 1.6;
+                }
+                .ig-card-wrap {
+                    flex: 1;
+                    max-width: 450px;
+                    height: 600px;
+                    border-radius: 12px;
+                    overflow: hidden;
+                    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+                    background: #fff;
+                    margin: 0 auto;
+                }
+                @media (max-width: 768px) {
+                    .ig-row, .ig-row.reverse {
+                        flex-direction: column;
+                        text-align: center;
+                    }
+                    .ig-card-wrap {
+                        height: 500px;
+                        width: 100%;
+                    }
+                    .ig-text-box h3 { font-size: 26px; }
+                    .ig-text-box p { font-size: 16px; }
+                }
+            </style>
+            
+            <div class="ig-layout-new">
+                <!-- Video 1: Manutenção pasta térmica -->
+                <div class="ig-row">
+                    <div class="ig-card-wrap">
+                        <iframe src="https://www.instagram.com/reel/DKNOZBBByga/embed" width="100%" height="100%" frameborder="0" scrolling="no" allowtransparency="true" style="border: none;"></iframe>
+                    </div>
+                    <div class="ig-text-box">
+                        <h3>Manutenção: Pasta Térmica</h3>
+                        <p>O aquecimento excessivo é um dos maiores inimigos dos drones. Neste vídeo, mostramos a importância de realizar a troca periódica da pasta térmica. Esse procedimento simples previne a queima de processadores e evita acidentes em voo devido ao superaquecimento das placas principais.</p>
+                    </div>
                 </div>
                 
-                <!-- Video 2 -->
-                <div class="ig-card">
-                    <iframe src="https://www.instagram.com/reel/DJ4T65HpXg3/embed" width="100%" height="100%" frameborder="0" scrolling="no" allowtransparency="true" style="border: none; flex: 1;"></iframe>
+                <!-- Video 2: Gambiarras (Texto Esquerda, Video Direita) -->
+                <div class="ig-row reverse">
+                    <div class="ig-card-wrap">
+                        <iframe src="https://www.instagram.com/reel/DJ4T65HpXg3/embed" width="100%" height="100%" frameborder="0" scrolling="no" allowtransparency="true" style="border: none;"></iframe>
+                    </div>
+                    <div class="ig-text-box">
+                        <h3>Reparos Improvisados</h3>
+                        <p>Evite curiosos mexendo no seu equipamento! Drones exigem calibração minuciosa e componentes adequados. Neste reparo, mostramos as terríveis "gambiarras" deixadas por assistências amadoras, e como uma solda mal feita ou peças incompatíveis colocam o seu drone (e outras pessoas) em risco.</p>
+                    </div>
                 </div>
                 
-                <!-- Video 3 -->
-                <div class="ig-card">
-                    <iframe src="https://www.instagram.com/reel/DJTvhY9CUKY/embed" width="100%" height="100%" frameborder="0" scrolling="no" allowtransparency="true" style="border: none; flex: 1;"></iframe>
+                <!-- Video 3: Teste de Voo -->
+                <div class="ig-row">
+                    <div class="ig-card-wrap">
+                        <iframe src="https://www.instagram.com/reel/DJTvhY9CUKY/embed" width="100%" height="100%" frameborder="0" scrolling="no" allowtransparency="true" style="border: none;"></iframe>
+                    </div>
+                    <div class="ig-text-box">
+                        <h3>Testes de Voo e Qualidade</h3>
+                        <p>O reparo não acaba na bancada! Antes de devolvermos o equipamento para você, realizamos testes reais de voo em áreas controladas para analisar estabilidade no ar, qualidade de sinal de vídeo e performance da bateria. Só assim garantimos 100% de precisão no conserto.</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -1619,7 +1688,7 @@
     <footer class="site-footer">
         <div class="container">
             <div class="footer-top">
-                <a href="#" class="logo">Drone<span>Place</span></a>
+                <a href="#" class="logo" style="display: flex; align-items: center;"><img src="assets/logo.png" alt="Drone Place Logo" style="height: 40px;"></a>
                 
                 <div class="footer-address">
                     <i class="ph ph-map-pin"></i> Rua Santo Antônio, 1460, Sala 501 - São José/SC
